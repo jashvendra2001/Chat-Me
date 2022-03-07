@@ -41,10 +41,12 @@ class MessageForm extends Component {
     fullName = userDOM.value;
 
     // Login
+    debugger
     socket.emit('login', fullName);
 
     // Check user
     socket.on('check user', function (isUsing) {
+      debugger
       if (!isUsing) {
         loginDOM.classList.add('is-hidden');
         textareaDOM.classList.remove('is-hidden');
@@ -65,6 +67,7 @@ class MessageForm extends Component {
     let message = ReactDOM.findDOMNode(this.refs.message);
 
     // Send message
+    debugger
     socket.emit('send message', {
       user: fullName,
       text: message.value,

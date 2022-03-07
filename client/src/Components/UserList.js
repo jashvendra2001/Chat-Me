@@ -18,12 +18,14 @@ class UserList extends Component {
   componentDidMount() {
     // Get online user
     socket.on('get online user', (onlineUsers) => {
+      debugger
       this.setState({
         users: onlineUsers
       });
     });
     // New user
     socket.on('new user', (fullname) => {
+      debugger
       this.addUser(fullname);
     });
   }

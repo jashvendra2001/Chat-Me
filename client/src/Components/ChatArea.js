@@ -17,6 +17,7 @@ class ChatArea extends Component {
 
     // New user
     socket.on('new user', (fullname) => {
+      debugger
       this.addMessage({
         type: 'information',
         user: fullname,
@@ -27,6 +28,7 @@ class ChatArea extends Component {
 
     // Exit user
     socket.on('exit user', (fullname) => {
+      debugger
       this.addMessage({
         type: 'information',
         user: fullname,
@@ -37,6 +39,7 @@ class ChatArea extends Component {
 
     // New message
     socket.on('new message', (message) => {
+      debugger
       this.addMessage({
         type: 'secondary',
         user: message.user,

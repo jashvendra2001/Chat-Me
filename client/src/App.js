@@ -10,7 +10,7 @@ const App = () => {
       <div className="hero-body">
         <div className="container">
 
-          <ChatHeader title="ysChat - WebSocket Chat" />
+          <ChatHeader title="Chat Me" />
           <ChatMain />
           <ChatFooter />
 
